@@ -1,0 +1,18 @@
+<a routerLink="/createHouse">createHouse</a>
+<router-outlet></router-outlet>
+
+<!--Login Form-->
+
+<form #loginForm = "ngForm"  (ngSubmit)="loginUser()">
+  <input type="text" name="email" placeholder="Введіть email"
+         [(ngModel)]="findUser.email"
+         email required>
+
+  <input type="text" name="password" placeholder="Введіть пароль"
+         [(ngModel)]="findUser.password"
+         required>
+
+  <button>Login</button>
+</form>
+
+

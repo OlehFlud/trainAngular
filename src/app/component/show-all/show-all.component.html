@@ -1,0 +1,17 @@
+<!--Show all info-->
+
+<div *ngFor="let house of houses"
+     [style.backgroundColor]=" house.owner.is_blocked ? 'red':'green' ">
+  <button (click)="ShowAllBtn(house.id)">ShowAllInfo</button>
+  <br>
+  id {{house.id}}
+  <div *ngIf="index === house.id">
+    owner {{house.owner.name}}
+    <br>
+    price: {{house.price}}
+    <br>
+    Price:USD {{house.price |currency:24.5}}
+    <br>
+    street: {{house.street}}
+  </div>
+</div>
